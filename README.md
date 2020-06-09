@@ -1,0 +1,1 @@
+<!-- repository for 10 days of javascript practice from hackerrank -->
