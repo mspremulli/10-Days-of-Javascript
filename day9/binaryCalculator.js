@@ -63,7 +63,7 @@ evaluate = () => {
   let answer = doMath(nums[0], nums[1], operators[0]);
   let i = 1;
   while(i < operators.length){
-    doMath(answer, nums[i + 1], operators[i])
+    answer = doMath(answer, nums[i + 1], operators[i])
     i++;
   }
 
@@ -82,7 +82,7 @@ doMath = (a, b, symbol) => {
     case'*':
       return (parseInt(a, 2) * parseInt(b, 2)).toString(2);
     case'/':
-      return (parseInt(a, 2) / parseInt(b, 2)).toString(2);
+      return Math.round(parseInt(a, 2) / parseInt(b, 2)).toString(2);
     default:
       console.error('invalid symbol');
       return 0;
